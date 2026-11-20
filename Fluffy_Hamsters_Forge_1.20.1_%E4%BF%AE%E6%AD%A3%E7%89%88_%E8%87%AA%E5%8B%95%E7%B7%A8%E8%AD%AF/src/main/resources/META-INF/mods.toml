@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="fluffyhamsters"
+version="0.1.0"
+displayName="Fluffy Hamsters"
+description="A fluffy cream-colored pet hamster, inspired by a long-haired Syrian hamster."
+[[dependencies.fluffyhamsters]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.fluffyhamsters]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"

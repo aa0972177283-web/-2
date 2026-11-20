@@ -1,0 +1,10 @@
+Fluffy Hamsters - Forge 1.20.1 - revised source (NOT a compiled mod)
+
+1. Create a NEW empty GitHub repository, or replace old project files.
+2. Upload the CONTENTS of this zip at the repository ROOT (not the zip itself).
+3. Ensure build.gradle and .github/workflows/build.yml are in the repository root.
+4. Commit changes. Open Actions -> Build Hamster Mod.
+5. If green, download the artifact ZIP and extract the .jar from it.
+6. If red, share the FIRST Java compiler error with ChatGPT.
+
+This revision is NOT verified to compile or work in Minecraft.
