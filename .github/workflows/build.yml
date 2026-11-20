@@ -1,0 +1,36 @@
+
+name: Build Hamster Mod
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.1.1'
+
+      - name: Build Forge mod
+        working-directory: Fluffy_Hamsters_Forge_1.20.1_Source/fluffy_hamsters
+        run: gradle build --no-daemon
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: Fluffy-Hamsters-Mod
+          path: Fluffy_Hamsters_Forge_1.20.1_Source/fluffy_hamsters/build/libs/*.jar
+          if-no-files-found: error
